@@ -1,0 +1,52 @@
+#! /bin/sh
+
+#This script must be run as sudo or root. 
+
+### This is designed and tested for the follwing only. 
+# This should in theory work in any debian-based distro of linux though. 
+#Test history:
+# Ubuntu 14.04
+# Ubuntu 16.04
+
+##############################################################
+#Prerequisites:
+# vimrc.hensel located in the same directory as this script. 
+
+##############################################################
+
+##############################################################
+## install packages
+#############################################################
+apt-get update
+
+apt-get dist-upgrade 
+
+apt-get install build-essential 
+
+apt-get install vim git subversion ssh rsync 
+
+apt-get install wireshark sqlitebrowser virtualbox inkscape
+
+#apt-get install sqlite-* libsqlite3-dev
+
+apt-get install python python-pip
+
+apt-get install cmake 
+
+apt-get install network-manager-openconnect
+
+###############################################################
+## vim config
+###############################################################
+# we take advantage of the lack of vimrc.local present by default in the folder. 
+# if there is a vimrc.local file, we back it up. Supress the output to screen if no file exists to be copied.  
+ln -sf vimrc.hensel /etc/vim/vimrc.local
+
+###############################################################
+## bash setup
+###############################################################
+# all custom bash commands are stored in the bash_hensel file. A symlink to this file is created in the home directory. 
+# We take advantage of the fact that the default bashrc already includes bash_aliases. 
+
+# the bashrc contains aliases for several scripts which are stored in the scripts directory of the HenselRC folder. 
+#ln -sf rc/bash_hensel ~/.bash_aliases

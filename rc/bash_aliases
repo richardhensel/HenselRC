@@ -1,0 +1,4 @@
+alias make='make -j 8'
+
+#alias pings='. ~/.pings.sh'
+#alias setIP='. ~/.setIp.sh'

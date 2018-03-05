@@ -1,0 +1,42 @@
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom vimrc config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Allow paste over without storing the overwritten text to buffer
+xnoremap p pgvy
+
+"tab maps to 4 spaces
+"filetype plugin indent on
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+set laststatus=2
+
+" custom bar colours for insert and normal mode
+highlight LineNr ctermfg=Darkgrey
+
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    hi statusline guibg=DarkRed ctermfg=6 guifg=Black ctermbg=0
+  elseif a:mode == 'r'
+    hi statusline guibg=Purple ctermfg=5 guifg=Black ctermbg=0
+  else
+    hi statusline guibg=DarkRed ctermfg=1 guifg=Black ctermbg=0
+  endif
+endfunction
+
+au InsertEnter * hi statusline ctermfg=Cyan ctermbg=Black
+au InsertLeave * hi StatusLine ctermbg=White ctermfg=0
+
+set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
+
+hi StatusLine ctermbg=White ctermfg=0
+" statusline is grey
+
+"d permanently deletes in normal and visual mode
+nnoremap <leader>p "_dP
+vnoremap <leader>p "_dP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

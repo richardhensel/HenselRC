@@ -19,31 +19,31 @@
 #############################################################
 apt-get update
 
-apt-get dist-upgrade 
+#apt-get dist-upgrade 
 
-apt-get install build-essential 
+#apt-get install build-essential 
 
 apt-get install vim git subversion ssh rsync 
 
-apt-get install vlc wireshark sqlitebrowser virtualbox inkscape remmina pinta
+#apt-get install vlc wireshark sqlitebrowser virtualbox inkscape remmina pinta
 
 #apt-get install sqlite-* libsqlite3-dev
 
-apt-get install python python-pip
+#apt-get install python python-pip
 
-apt-get install cmake 
+#apt-get install cmake 
 
 #for cisco anyconnect vpn client
 #apt-get install network-manager-openconnect
 
-apt-get install gnome-tweak-tool gnome-shell gnome-panel
+#apt-get install gnome-tweak-tool gnome-shell gnome-panel
 
 ###############################################################
 ## vim config
 ###############################################################
 # we take advantage of the lack of vimrc.local present by default in the folder. 
 # if there is a vimrc.local file, we back it up. Supress the output to screen if no file exists to be copied.  
-ln -sf vimrc.hensel /etc/vim/vimrc.local
+cp rc/vimrc.hensel /etc/vim/vimrc.local
 
 ###############################################################
 ## bash setup

@@ -25,6 +25,8 @@ apt-get update
 
 apt-get install vim git subversion ssh rsync 
 
+apt-get install arp-scan 
+
 #apt-get install vlc wireshark sqlitebrowser virtualbox inkscape remmina pinta
 
 #apt-get install sqlite-* libsqlite3-dev

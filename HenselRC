@@ -23,22 +23,13 @@ apt-get update
 
 #apt-get install build-essential 
 
-apt-get install vim git subversion ssh rsync 
+#apt-get install vim git subversion ssh rsync 
 
-apt-get install arp-scan 
-
-#apt-get install vlc wireshark sqlitebrowser virtualbox inkscape remmina pinta
-
-#apt-get install sqlite-* libsqlite3-dev
+#apt-get install vlc wireshark sqlitebrowser inkscape remmina pinta
 
 #apt-get install python python-pip
 
 #apt-get install cmake 
-
-#for cisco anyconnect vpn client
-#apt-get install network-manager-openconnect
-
-#apt-get install gnome-tweak-tool gnome-shell gnome-panel
 
 ###############################################################
 ## vim config
